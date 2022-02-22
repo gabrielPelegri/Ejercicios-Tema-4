@@ -1,3 +1,7 @@
+Lo que hace este algoritmo es preguntar al usuario la capital de Francia. Cada vez que reponda de forma errónea sumará 1 a su número de intentos.
+Cuando el número de intentos y el máximo de intentos sean iguales , se cerrará el bucle con un mensaje por pantalla. Si acierta antes de gastar los intentos cerrará el 
+bucle con un mensaje diferente.
+
 public class T4ej6 {
 
     /**
