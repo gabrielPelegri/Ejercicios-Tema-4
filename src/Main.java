@@ -11,33 +11,39 @@ public class Main {
     	int int_random = rand.nextInt(101); // el numero aleatorio
     	
         Scanner teclado = new Scanner(System.in);
-        System.out.println("I¿En qué número entre 1 y 100 estoy pensando?");
-        int cantidad = -1;
+        System.out.println("Elija un número del 1 al 100, luego presione cualquier tecla.");
+        char tecla = teclado.next().charAt(0);
+        int minimo = 0;
+        int maximo = 100;
         
-        
-        while(cantidad != int_random) {
+        while(tecla != '=') {
         	
-        	//int cantidad = teclado.nextInt();
+        	int_random = rand.nextInt(minimo, maximo);
+        	System.out.println("Pruebo con" +int_random+", ¿es mayor, menor o es el número (+/-/=)?");
+        	
             while (true) {
                 try {
-                    cantidad = teclado.nextInt();
+                    tecla = teclado.next().charAt(0);
                     break;
                 } catch (InputMismatchException e) {
-                	System.out.println("Eso no es un numero, vuelva a intentar:");
+                	System.out.println("Vuelva a intentar:");
                     teclado.next();
                 }
             }
         	
         	
-        	if(cantidad < int_random) {
-        		System.out.println("Mayor");
+        	if(tecla == '+') {
+        		minimo = int_random +1;
         	}
-        	if(cantidad > int_random) {
-        		System.out.println("Menor");
+        	else if(tecla == '-') {
+        		maximo = int_random -1;
+        	}
+        	else if(tecla != '='){
+        		System.out.println("Vuelva a intentar:");
         	}
         }
         teclado.close();
-        System.out.println("Bravo, lo ha encontrado");
+        System.out.println("Bravo, lo he encontrado!");
         
 
 
