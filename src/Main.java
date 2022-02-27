@@ -1,6 +1,7 @@
-import java.util.InputMismatchException;
+
+
 import java.util.Scanner;
-import java.util.Random;
+
 public class Main {
 
     /**
@@ -19,10 +20,10 @@ public class Main {
         		System.out.println("Error "+numero+" no es un multiplo de 3");
         	}
         	
-        }while(numero%3==0)
+        }while(numero%3!=0);
         	
         teclado.close();
-        System.out.println("Ok:"+numero+"es un multiplo de 3");
+        System.out.println("Ok: "+numero+" es un multiplo de 3");
         
 
 
