@@ -13,7 +13,6 @@ public class Main {
     	
         Scanner teclado = new Scanner(System.in);
         System.out.println("Escriba un multiplo de 3:");
-        //while(numero%3==0) {
         do {
         	numero= teclado.nextInt();
         	if(numero%3!=0) {
